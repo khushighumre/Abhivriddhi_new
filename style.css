@@ -11,6 +11,52 @@
   color: white;
 }
 
+/* ===== NEW BACKGROUND ===== */
+
+body {
+  background: #050010; /* replace old gradient */
+  
+}
+
+/* Aurora */
+.aurora {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(1, 86, 155, 0.338), transparent),
+    radial-gradient(circle at 80% 70%, rgba(136, 135, 202, 0.457), transparent),
+    radial-gradient(circle at 50% 50%, rgba(11, 2, 81, 0.151), transparent);
+  animation: auroraMove 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+/* For some movement of the background, add if needed */
+
+/* @keyframes auroraMove {
+  0% { transform: translate(0,0) rotate(0deg); }
+  100% { transform: translate(-10%, -10%) rotate(10deg); }
+} */
+
+/* Canvas particles */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main,
+nav,
+.hero-section,
+.events-section,
+.testimonials,
+footer {
+  position: relative;
+  z-index: 5;
+}
+
 html,
 body {
   height: 100%;
@@ -242,7 +288,7 @@ nav .menu {
 }
 
 .highlight {
-  color: #00ff00d8; /* Highlight color */
+  color: #4ac3efd8; /* Highlight color */
 }
 
 .description {
@@ -253,8 +299,8 @@ nav .menu {
 }
 
 .description span {
-  color: #04bd3b; /* Highlight color for keywords */
-  border: 1px solid #0da34e;
+  color: #4ac3efd8; /* Highlight color for keywords */
+  border: 2px solid #4ac3efd8;
   border-radius: 40px;
   padding: 8px 8px;
   margin: 0 2px;
@@ -263,7 +309,7 @@ nav .menu {
 
 .description span:hover {
   color: #fff; /* Highlight color for keywords */
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 @media (max-width: 786px) {
